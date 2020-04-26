@@ -7,7 +7,7 @@ public class Ball : MonoBehaviour
     [SerializeField] private float xPush = 1f;
     [SerializeField] private float yPush = 10f;
     [SerializeField] private AudioClip[] ballSounds;
-    [SerializeField] public float randomFactor = 0.2f;
+    [SerializeField] private float randomFactor = 0.2f;
     
     private Vector2 paddleToBallVector;
     private bool isStarted;
@@ -68,10 +68,4 @@ public class Ball : MonoBehaviour
     {
         return isStarted;
     }
-
-    public float GetXPos()
-    {
-        return transform.position.x;
-    }
-
 }

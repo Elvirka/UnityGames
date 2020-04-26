@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameSession : MonoBehaviour
 {
-    [Range(0.1f, 10f)][SerializeField] float gameSpeed = 1f;
+    [Range(0.1f, 10f)][SerializeField] private float gameSpeed = 1f;
     [SerializeField] private int pointsPerHint = 10;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private int currentScore = 0;

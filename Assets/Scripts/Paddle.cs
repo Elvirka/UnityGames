@@ -2,11 +2,12 @@
 
 public class Paddle : MonoBehaviour
 {
-    [SerializeField] float screenWidthInUnits = 16;
+    [SerializeField] private float screenWidthInUnits = 16;
+    
     private SpriteRenderer rend;
-    private float halfWidth;
     private GameSession theGameSession;
     private Ball theBall;
+    private float halfWidth;
     
     // Start is called before the first frame update
     void Start()
@@ -28,9 +29,9 @@ public class Paddle : MonoBehaviour
     private float GetXPos()
     {
         float posInUnits;
-        if (theGameSession.isActiveAndEnabled && theBall.IsStarted())
+        if (theGameSession.IsAutoPlayEnabled() && theBall.IsStarted())
         {
-            posInUnits = theBall.GetXPos();
+            posInUnits = theBall.transform.position.x;
         }
         else
         {
