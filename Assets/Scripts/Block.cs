@@ -13,12 +13,17 @@ public class Block : MonoBehaviour
 
     private void Start()
     {
+        CountBreakableBlocks();
+        gameSession = FindObjectOfType<GameSession>();
+    }
+
+    private void CountBreakableBlocks()
+    {
         level = FindObjectOfType<Level>();
         if (gameObject.CompareTag("Breakable"))
         {
-            level.CountBreakableBlocks();
+            level.CountBlocks();
         }
-        gameSession = FindObjectOfType<GameSession>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
