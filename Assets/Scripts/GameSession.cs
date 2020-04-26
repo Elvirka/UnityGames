@@ -4,10 +4,10 @@ using UnityEngine;
 public class GameSession : MonoBehaviour
 {
     [Range(0.1f, 10f)][SerializeField] float gameSpeed = 1f;
-    [SerializeField] int pointsPerBlock = 10;
-    [SerializeField] TextMeshProUGUI scoreText;
-
-    [SerializeField] int currentScore = 0;
+    [SerializeField] private int pointsPerHint = 10;
+    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private int currentScore = 0;
+    [SerializeField] private bool isAutoPlayEnabled;
 
     private void Awake()
     {
@@ -34,14 +34,19 @@ public class GameSession : MonoBehaviour
         Time.timeScale = gameSpeed;
     }
 
-    public void AddToScore()
+    public void AddToScore(int hintsCount)
     {
-        currentScore += pointsPerBlock;
+        currentScore += pointsPerHint * hintsCount;
         scoreText.text = currentScore.ToString();
     }
     
     public void ResetGame()
     {
         Destroy(gameObject);
+    }
+
+    public bool IsAutoPlayEnabled()
+    {
+        return isAutoPlayEnabled;
     }
 }

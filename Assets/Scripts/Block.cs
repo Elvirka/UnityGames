@@ -64,7 +64,7 @@ public class Block : MonoBehaviour
 
     private void DestroyBlock()
     {
-        gameSession.AddToScore();
+        gameSession.AddToScore(timesHits);
         PlayBlockDestroySFX();
         Destroy(gameObject);
         level.CountDestroyedBlocks();

@@ -10,7 +10,7 @@ public class Ball : MonoBehaviour
     [SerializeField] public float randomFactor = 0.2f;
     
     private Vector2 paddleToBallVector;
-    private bool hasStarted;
+    private bool isStarted;
 
     private AudioSource myAudioSource;
     private Rigidbody2D myRigidbody;
@@ -19,7 +19,7 @@ public class Ball : MonoBehaviour
     void Start()
     {
         paddleToBallVector = transform.position - paddle1.transform.position;
-        hasStarted = false;
+        isStarted = false;
         myAudioSource = GetComponent<AudioSource>();
         myRigidbody = GetComponent<Rigidbody2D>();
     }
@@ -27,7 +27,7 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!hasStarted)
+        if (!isStarted)
         {
             LaunchOnMouseClick();
             LockToPaddle();
@@ -39,7 +39,7 @@ public class Ball : MonoBehaviour
         //Input.GetMouseButtonDown(0)
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            hasStarted = true;
+            isStarted = true;
             GetComponent<Rigidbody2D>().velocity = new Vector2(xPush, yPush);
         }
     }
@@ -56,11 +56,22 @@ public class Ball : MonoBehaviour
             Random.Range(-randomFactor, randomFactor), 
             Random.Range(-randomFactor, randomFactor));
         
-        if (hasStarted)
+        if (isStarted)
         {
             AudioClip clip = ballSounds[Random.Range(0, ballSounds.Length)]; 
             myAudioSource.PlayOneShot(clip);
             myRigidbody.velocity += velocityTweak;
         }
     }
+
+    public bool IsStarted()
+    {
+        return isStarted;
+    }
+
+    public float GetXPos()
+    {
+        return transform.position.x;
+    }
+
 }
