@@ -4,3 +4,6 @@
 Temp/
 *.cache
 *.log
+/obj/Debug/Assembly-CSharp.*
+/BlocksDestroyer.sln
+/Assembly-CSharp.*
