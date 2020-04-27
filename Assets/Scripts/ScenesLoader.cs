@@ -17,6 +17,19 @@ public class ScenesLoader : MonoBehaviour
             FindObjectOfType<GameSession>().ResetGame();
         }
     }
+    
+    public void LoadWinScene()
+    {
+        //int winSceneIndex = SceneManager.GetSceneByName("Win").buildIndex;
+        SceneManager.LoadScene(5);
+    }
+    
+    
+    public Scene GetActiveScene()
+    {
+        return SceneManager.GetActiveScene();
+    }
+
     public void QuitGame()
     {    
         Application.Quit();

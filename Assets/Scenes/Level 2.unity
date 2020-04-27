@@ -2240,6 +2240,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3140884548511682283, guid: 5a5b9a47ce6ed48f5ac41bec5722ebbc,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3140884548511682283, guid: 5a5b9a47ce6ed48f5ac41bec5722ebbc,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3140884548511682283, guid: 5a5b9a47ce6ed48f5ac41bec5722ebbc,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3140884548729733824, guid: 5a5b9a47ce6ed48f5ac41bec5722ebbc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3524,6 +3539,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7615452494688624872, guid: 02d9681b8a3fa41a89c87908072f18bd,
+        type: 3}
+      propertyPath: isAutoPlayEnabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7615452494688624873, guid: 02d9681b8a3fa41a89c87908072f18bd,
         type: 3}
       propertyPath: m_Name
@@ -3638,4 +3658,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 897f68fedc1fc459fbf5f854c45e1938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakableBlocks: 0
+  blocksCount: 0

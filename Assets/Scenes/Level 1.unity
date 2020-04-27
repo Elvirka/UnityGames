@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 897f68fedc1fc459fbf5f854c45e1938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakableBlocks: 0
+  blocksCount: 0
 --- !u!1001 &215098716
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4867,6 +4867,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3140884548511682283, guid: 5a5b9a47ce6ed48f5ac41bec5722ebbc,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.990566
+      objectReference: {fileID: 0}
+    - target: {fileID: 3140884548511682283, guid: 5a5b9a47ce6ed48f5ac41bec5722ebbc,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.6961997
+      objectReference: {fileID: 0}
+    - target: {fileID: 3140884548511682283, guid: 5a5b9a47ce6ed48f5ac41bec5722ebbc,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.8913044
       objectReference: {fileID: 0}
     - target: {fileID: 3140884548729733824, guid: 5a5b9a47ce6ed48f5ac41bec5722ebbc,
         type: 3}

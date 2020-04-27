@@ -21,7 +21,15 @@ public class Level : MonoBehaviour
         blocksCount--;
         if (blocksCount <= 0)
         {
-            scenesLoader.LoadNextScene();
+            string qwe = scenesLoader.GetActiveScene().name;
+            if (scenesLoader.GetActiveScene().name == "Level 2")
+            {
+                scenesLoader.LoadWinScene();
+            }
+            else
+            {
+                scenesLoader.LoadNextScene();
+            }
         }
     }
 }
