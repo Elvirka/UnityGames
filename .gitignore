@@ -6,4 +6,4 @@ Temp/
 *.log
 /obj/
 /BlocksDestroyer.sln
-Assembly-CSharp.csproj
+*.csproj
