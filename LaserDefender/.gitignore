@@ -1,0 +1,9 @@
+/.idea/
+/Release/
+/Library/
+Temp/
+*.cache
+*.log
+/obj/
+/BlocksDestroyer.sln
+*.csproj
